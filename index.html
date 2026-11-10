@@ -7,7 +7,7 @@
 <meta name="description" content="Flat-rate monthly bookkeeping for Philadelphia small businesses. QuickBooks ProAdvisor. Clean books, clear reports, no hourly surprises.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --sea:#003b5d;        /* brand blue */
@@ -121,6 +121,121 @@
   footer .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:28px;padding-bottom:28px;flex-wrap:wrap}
   footer a{text-decoration:none}
 
+  /* ===== Frutiger Aero theme ===== */
+  :root{
+    --sky-top:#0a6fb3; --sky-mid:#2aa3e6; --sky-low:#8fdcff;
+    --aqua:#1aa0e0; --aqua-deep:#08466f; --leaf:#4cc72a;
+    --muted:#4a6b80; --ink:#123247;
+  }
+  body{background:linear-gradient(180deg,#e9f8ff 0%,#f6fdff 35%,#eefbf0 100%);color:var(--ink)}
+  h1,h2,h3{font-family:"Segoe UI",Inter,system-ui,sans-serif;font-weight:700;letter-spacing:-.01em;color:var(--aqua-deep)}
+
+  /* Glossy header bar */
+  header{background:linear-gradient(180deg,#5ccaf7 0%,#2aa3e6 48%,#0f86cc 52%,#1b97d9 100%);
+    border-bottom:1px solid rgba(255,255,255,.55);box-shadow:0 2px 10px rgba(0,70,120,.25);position:relative;z-index:2}
+  .logo-img{box-shadow:0 0 0 2px rgba(255,255,255,.7),0 3px 8px rgba(0,40,80,.35)}
+  .wordmark{text-shadow:0 1px 2px rgba(0,50,90,.4)}
+  .links a{text-shadow:0 1px 1px rgba(0,50,90,.35)}
+
+  /* Glossy pill buttons */
+  .btn{border-radius:999px;padding:13px 26px;color:#fff;text-shadow:0 1px 1px rgba(0,60,0,.45);
+    background:linear-gradient(180deg,#a8f080 0%,#5fd63a 48%,#3cb81f 52%,#62d83c 100%);
+    border:1px solid #2e9417;box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 4px 12px rgba(20,90,10,.28);
+    transition:filter .15s,transform .15s}
+  .btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+  .contact .btn-outline{color:#fff;border:1px solid rgba(255,255,255,.75);text-shadow:0 1px 1px rgba(0,40,80,.4);
+    background:linear-gradient(180deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.18) 50%,rgba(255,255,255,.08) 51%,rgba(255,255,255,.22) 100%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 4px 12px rgba(0,40,80,.25)}
+
+  /* Sky hero with sun glow, bubbles and grassy hills */
+  .hero{position:relative;overflow:hidden;padding:84px 0 170px;
+    background:radial-gradient(ellipse 45% 55% at 86% 8%,rgba(255,255,255,.75),rgba(255,255,255,0) 70%),
+               linear-gradient(180deg,var(--sky-top) 0%,var(--sky-mid) 55%,var(--sky-low) 100%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1,.hero p,.hero .sub,.hero .phone{text-shadow:0 1px 3px rgba(0,50,90,.45)}
+  .hero p,.hero .sub{opacity:1}
+  .hills{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:150px;z-index:1;display:block}
+
+  .bubbles{position:absolute;inset:0;pointer-events:none;z-index:1}
+  .bubbles span{position:absolute;border-radius:50%;
+    background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95) 0 7%,rgba(255,255,255,.28) 18%,rgba(255,255,255,.06) 52%,rgba(255,255,255,.32) 100%);
+    border:1px solid rgba(255,255,255,.55);box-shadow:inset 0 -6px 14px rgba(255,255,255,.18);
+    animation:float 9s ease-in-out infinite}
+  .bubbles span:nth-child(1){width:150px;height:150px;right:9%;top:22%}
+  .bubbles span:nth-child(2){width:64px;height:64px;right:26%;top:12%;animation-delay:-2s}
+  .bubbles span:nth-child(3){width:96px;height:96px;right:3%;top:58%;animation-delay:-4s}
+  .bubbles span:nth-child(4){width:38px;height:38px;right:21%;top:62%;animation-delay:-1s}
+  .bubbles span:nth-child(5){width:24px;height:24px;right:33%;top:40%;animation-delay:-6s}
+  .bubbles span:nth-child(6){width:52px;height:52px;left:4%;top:8%;animation-delay:-3s}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+  @media (prefers-reduced-motion:reduce){.bubbles span{animation:none}}
+
+  /* Glass trust panel floating over the hills */
+  .trust{border:0;position:relative;z-index:3;margin-top:-78px}
+  .trust .wrap{max-width:1032px;border-radius:20px;padding:24px 30px;
+    background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.78));
+    border:1px solid #fff;box-shadow:0 12px 32px rgba(0,90,150,.18),inset 0 1px 0 #fff;color:var(--muted)}
+  .trust strong{color:var(--aqua-deep)}
+
+  .eyebrow{color:var(--aqua)}
+  .lead{color:var(--muted)}
+
+  /* Glass cards with aqua orbs */
+  .card{position:relative;border-radius:20px;padding:30px 28px 28px;border:1px solid rgba(255,255,255,.95);
+    background:linear-gradient(180deg,rgba(255,255,255,.97) 0%,rgba(240,250,255,.8) 100%);
+    box-shadow:0 10px 28px rgba(0,100,160,.13),inset 0 1px 0 #fff}
+  .card:before{content:"";display:block;width:36px;height:36px;border-radius:50%;margin-bottom:16px;
+    background:radial-gradient(circle at 35% 28%,#fff 0 10%,#9cecff 26%,#25aee8 62%,#0a6fae 100%);
+    box-shadow:0 3px 8px rgba(0,90,150,.3)}
+  .card:nth-child(3n+2):before{background:radial-gradient(circle at 35% 28%,#fff 0 10%,#c6f7a0 26%,#5fd63a 62%,#2e8f18 100%);box-shadow:0 3px 8px rgba(30,110,10,.3)}
+  .card p{color:var(--muted)}
+
+  /* How it works: soft sky band with glossy number orbs */
+  #how{background:linear-gradient(180deg,rgba(186,234,255,.55),rgba(220,248,232,.55)) !important}
+  .step{border-top:0;padding-top:0}
+  .step:before{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+    color:#fff;font-family:"Segoe UI",Inter,sans-serif;font-size:15px;text-shadow:0 1px 1px rgba(0,50,90,.5);
+    background:radial-gradient(circle at 35% 25%,#d9f6ff 0 12%,#3cb8f0 45%,#0a6fae 100%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 4px 10px rgba(0,90,150,.3)}
+  .step p{color:var(--muted)}
+
+  /* About: logo as a glossy orb on a sky panel */
+  .about{border-top:0}
+  .about-mark{position:relative;overflow:hidden;border-radius:24px;
+    background:radial-gradient(ellipse 60% 50% at 75% 15%,rgba(255,255,255,.8),rgba(255,255,255,0) 70%),
+               linear-gradient(180deg,#2aa3e6 0%,#8fdcff 70%,#c9f3a8 100%);
+    box-shadow:0 12px 32px rgba(0,90,150,.2)}
+  .about-mark img{width:66%;border-radius:50%;box-shadow:0 0 0 6px rgba(255,255,255,.55),0 14px 30px rgba(0,40,80,.35)}
+  .creds span{color:var(--aqua-deep);border:1px solid #fff;
+    background:linear-gradient(180deg,#ffffff 0%,#dff4ff 50%,#cdeeff 51%,#e6f7ff 100%);
+    box-shadow:0 2px 6px rgba(0,90,150,.15)}
+
+  /* Contact: deep water with bubbles */
+  .contact{position:relative;overflow:hidden;
+    background:radial-gradient(ellipse 50% 60% at 50% 0%,rgba(120,220,255,.45),rgba(120,220,255,0) 70%),
+               linear-gradient(180deg,#0b7cc0 0%,#085a95 60%,#06406e 100%)}
+  .contact .wrap{position:relative;z-index:2}
+  .contact h2{text-shadow:0 2px 4px rgba(0,30,60,.4)}
+  .contact .bubbles span:nth-child(1){left:6%;right:auto;top:30%;width:110px;height:110px}
+  .contact .bubbles span:nth-child(2){left:16%;right:auto;top:68%;width:40px;height:40px}
+  .contact .bubbles span:nth-child(3){right:7%;top:18%;width:80px;height:80px}
+  .contact .bubbles span:nth-child(4){right:15%;top:64%;width:30px;height:30px}
+  .social a{border:1px solid rgba(255,255,255,.8);
+    background:radial-gradient(circle at 35% 25%,rgba(255,255,255,.75) 0 10%,rgba(255,255,255,.2) 45%,rgba(255,255,255,.08) 100%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 4px 10px rgba(0,30,60,.3)}
+
+  footer{background:linear-gradient(180deg,#06406e,#042f52);border-top:1px solid rgba(255,255,255,.15)}
+
+  @media (max-width:860px){
+    body .hero{padding:44px 0 150px}
+    .links .btn{white-space:nowrap;padding:9px 14px;font-size:14px}
+    .wordmark{font-size:13px;letter-spacing:.1em}
+    .bubbles span:nth-child(6),.bubbles span:nth-child(2){display:none}
+    .bubbles span:nth-child(1){width:90px;height:90px;top:auto;bottom:120px}
+    .bubbles span:nth-child(3),.bubbles span:nth-child(5){display:none}
+    .trust .wrap{margin:0 16px}
+  }
+
   @media (max-width:860px){
     .links a:not(.btn){display:none}
     .hero h1{font-size:36px}
@@ -155,6 +270,7 @@
 </header>
 
 <div class="hero" id="top">
+  <div class="bubbles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
   <div class="wrap">
     <span class="sub">Bookkeeping for Philadelphia small businesses</span>
     <h1>Clean books every month, at one flat price.</h1>
@@ -164,6 +280,14 @@
       <a class="phone" href="tel:+14847073588">or call 484-707-3588</a>
     </div>
   </div>
+  <svg class="hills" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9f27f"/><stop offset="1" stop-color="#5cc531"/></linearGradient>
+      <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8ee05a"/><stop offset="1" stop-color="#3fae2a"/></linearGradient>
+    </defs>
+    <path d="M0,92 C260,30 520,40 760,78 C1000,116 1220,60 1440,48 L1440,150 L0,150 Z" fill="url(#g1)"/>
+    <path d="M0,124 C300,82 560,96 820,120 C1060,142 1260,104 1440,96 L1440,150 L0,150 Z" fill="url(#g2)"/>
+  </svg>
 </div>
 
 <div class="trust">
@@ -241,6 +365,7 @@
 </section>
 
 <section class="contact" id="contact">
+  <div class="bubbles" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <div class="wrap">
     <h2>Let's get your books in order.</h2>
     <p>Book a free 15-minute call. We'll talk about your business, and you'll get a flat-rate quote with no obligation.</p>
